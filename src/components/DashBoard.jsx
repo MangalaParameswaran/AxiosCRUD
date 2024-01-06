@@ -86,19 +86,19 @@ function DashBoard() {
 
             <div>
                 {/* Table for displaying blog data */}
-                <Table responsive bordered striped hover className="overflow-auto">
+                <Table responsive bordered striped hover className="overflow-auto mt-4">
                     <thead>
                         <tr>
                             {/* Table headers */}
-                            <th className='text-center fw-bold'>#</th>
-                            <th className='text-center fw-bold'>Name</th>
-                            <th className='text-center fw-bold'>Address</th>
-                            <th className='text-center fw-bold'>Image</th>
-                            <th className='text-center fw-bold'>Email</th>
-                            <th className='text-center fw-bold'>Company Name</th>
-                            <th className='text-center fw-bold'>Website Name</th>
-                            <th className='text-center fw-bold'>Status</th>
-                            <th className='text-center fw-bold'>Actions</th>
+                            <th className='text-center fw-bold' style={{backgroundColor:'aliceblue'}}>#</th>
+                            <th className='text-center fw-bold' style={{backgroundColor:'aliceblue'}}>Name</th>
+                            <th className='text-center fw-bold' style={{backgroundColor:'aliceblue'}}>Address</th>
+                            <th className='text-center fw-bold' style={{backgroundColor:'aliceblue'}}>Image</th>
+                            <th className='text-center fw-bold' style={{backgroundColor:'aliceblue'}}>Email</th>
+                            <th className='text-center fw-bold' style={{backgroundColor:'aliceblue'}}>Company Name</th>
+                            <th className='text-center fw-bold' style={{backgroundColor:'aliceblue'}}>Website Name</th>
+                            <th className='text-center fw-bold' style={{backgroundColor:'aliceblue'}}>Status</th>
+                            <th className='text-center fw-bold' style={{backgroundColor:'aliceblue'}}>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -131,7 +131,7 @@ function DashBoard() {
                                     </div>
                                     <td className='text-center'>
                                         {/* Displaying blog image */}
-                                        <img src={e.image} alt={e.name} style={{ width: "8em", height: '8em' }} className='img-fluid rounded-4' />
+                                        <img src={e.image} alt={e.name} style={{ width: "8em", height: '8em' }} className='img-fluid img rounded-4' title={e.name} />
                                     </td>
                                     <td className='text-center'><i><b>{e.email}</b></i></td>
                                     <td className='text-center'><i><b>{e.company.name}</b></i></td>

@@ -1,8 +1,6 @@
-.previewWrapper{
-    display: flex;
-    flex-direction: column;
+td .img:hover{
+  cursor: pointer !important;
 }
-
 .switch {
     position: relative;
     display: inline-block;

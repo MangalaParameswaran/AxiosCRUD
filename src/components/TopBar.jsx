@@ -24,7 +24,7 @@ function TopBar() {
                 height="30"
                 className="d-inline-block align-top rounded-5"
               />{' '}
-              <b>React Bootstrap</b>
+              <b>Bloger App</b>
             </Navbar.Brand>
 
             {/* Responsive navigation toggle button */}
@@ -35,9 +35,9 @@ function TopBar() {
               <div className='text-center'>
                 {/* Navigation items */}
                 <Nav className="me-auto">
-                  <Nav.Link onClick={() => navigate('/')}><b>Home</b></Nav.Link>
-                  <Nav.Link onClick={() => navigate('/dashboard')}><b>DashBoard</b></Nav.Link>
-                  <Nav.Link onClick={() => navigate('/create')}><b>Create</b></Nav.Link>
+                  <Nav.Link onClick={() => navigate('/')}><b className='btn btn-outline-primary fw-bold text-light'>Home</b></Nav.Link>
+                  <Nav.Link onClick={() => navigate('/dashboard')}><b className='btn btn-outline-primary fw-bold text-light'>DashBoard</b></Nav.Link>
+                  <Nav.Link onClick={() => navigate('/create')}><b className='btn btn-outline-primary fw-bold text-light'>Create</b></Nav.Link>
                 </Nav>
               </div>
             </Navbar.Collapse>
