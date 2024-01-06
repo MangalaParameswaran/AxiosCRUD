@@ -1,32 +1,34 @@
-import React from 'react'
+import React from 'react';
 import Card from 'react-bootstrap/Card';
-import { API_URL } from '../../App'
+import { API_URL } from '../../App';
 
-
-function AxiosCard({name,adrress,image,email,companyName,website}) {
-  // console.log(API_URL);
-  // console.log(Axios);
-  return <div className='mx-auto my-4 d-flex justify-content-center'>
-  <Card style={{ width: '30rem',padding:"10px"}}>
-    <Card.Title className='text-center fw-bold'>{`Name: ${name}`}</Card.Title>
-    <Card.Img variant="top" src={image} alt={name} style={{height:'25em'}}/>
-    <Card.Body>
-    <Card.Text className='text-center fw-bold'>
-        <i>{`Adrress: ${adrress}`}</i>
-      </Card.Text>  
-    <Card.Text className='text-center fw-bold'>
-        <i>{`Email: ${email}`}</i>
-      </Card.Text>
-      <Card.Text className='text-center fw-bold'>
-        <i>{`Company name: ${companyName}`}</i>
-      </Card.Text>
-      <Card.Text className='text-center fw-bold'>
-        <i>{`Website Name: ${website}`}</i>
-      </Card.Text>
-    </Card.Body>
-  </Card>
-  </div>
-  
+// AxiosCard component to display blog information
+function AxiosCard({ name, adrress, image, email, companyName, website }) {
+  return (
+    <div className='mx-auto my-4 d-flex justify-content-center'>
+      {/* Bootstrap Card component */}
+      <Card style={{ width: '30rem', padding: '10px' }}>
+        <Card.Title className='text-center fw-bold'>{`Name: ${name}`}</Card.Title>
+        {/* Card image with alt text and custom height */}
+        <Card.Img variant="top" src={image} alt={name} style={{ height: '25em' }} />
+        <Card.Body>
+          {/* Displaying blog information in Card.Text components */}
+          <Card.Text className='text-center fw-bold'>
+            <i>{`Address: ${adrress}`}</i>
+          </Card.Text>
+          <Card.Text className='text-center fw-bold'>
+            <i>{`Email: ${email}`}</i>
+          </Card.Text>
+          <Card.Text className='text-center fw-bold'>
+            <i>{`Company Name: ${companyName}`}</i>
+          </Card.Text>
+          <Card.Text className='text-center fw-bold'>
+            <i>{`Website Name: ${website}`}</i>
+          </Card.Text>
+        </Card.Body>
+      </Card>
+    </div>
+  );
 }
 
-export default AxiosCard
+export default AxiosCard;
