@@ -16,12 +16,15 @@ function AxiosCard({ name, adrress, image, email, companyName, website }) {
           <Card.Text className='text-center fw-bold'>
             <i>{`Address: ${adrress}`}</i>
           </Card.Text>
+          <hr />
           <Card.Text className='text-center fw-bold'>
             <i>{`Email: ${email}`}</i>
           </Card.Text>
+          <hr />
           <Card.Text className='text-center fw-bold'>
             <i>{`Company Name: ${companyName}`}</i>
           </Card.Text>
+          <hr />
           <Card.Text className='text-center fw-bold'>
             <i>{`Website Name: ${website}`}</i>
           </Card.Text>
