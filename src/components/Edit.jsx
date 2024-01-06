@@ -71,8 +71,28 @@ function Edit() {
             <Form.Label className='fw-bold'>Name</Form.Label>
             <Form.Control type='text' placeholder='Name' value={name} onChange={(e) => setName(e.target.value)} className='text-center fw-bold' />
           </Form.Group>
-          {/* Similar form groups for other fields */}
-          {/* ... */}
+          <Form.Group className="mb-3 text-center">
+      <Form.Label className='fw-bold'>Adrress</Form.Label>
+      <Form.Control type="text" placeholder="Adrress" value={adrress} onChange={(e)=>setAdrress(e.target.value)}  className="text-center fw-bold" />
+    </Form.Group>
+
+    <Form.Group className="mb-3 text-center">
+      <Form.Label className='fw-bold'>Image URL</Form.Label>
+      <Form.Control type="text" placeholder="Image URL" value={image} onChange={(e)=>setImage(e.target.value)} className="text-center fw-bold" />
+    </Form.Group>
+    <Form.Group className="mb-3 text-center">
+      <Form.Label className='fw-bold'>Email</Form.Label>
+      <Form.Control type="email" placeholder="Email" value={email} onChange={(e)=>setEmail(e.target.value)}  className="text-center fw-bold" />
+    </Form.Group>
+    <Form.Group className="mb-3 text-center">
+      <Form.Label className='fw-bold'>Company Name</Form.Label>
+      <Form.Control type="text" placeholder="Company Name" value={companyName} onChange={(e)=>setCompanyName(e.target.value)}  className="text-center fw-bold" />
+    </Form.Group>
+    <Form.Group className="mb-3 text-center">
+      <Form.Label className='fw-bold'>Website Name</Form.Label>
+      <Form.Control type="text" placeholder="Website Name" value={website} onChange={(e)=>setWebsite(e.target.value)}  className="text-center fw-bold" />
+    </Form.Group>
+
           <div className='text-center'>
             <Button variant='success' className='fw-bold' onClick={() => handleEdit()}>
               Submit
