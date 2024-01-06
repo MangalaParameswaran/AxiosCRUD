@@ -39,7 +39,10 @@ function Home() {
       {/* TopBar component for navigation */}
       <TopBar />
 
-      <div className='container-fluid'>
+      <div className="container">
+      <div className="row">
+        {/* <div className="col-11 col-md-6 col-lg-3 mx-auto col-sm-8"> */}
+        
         {/* Mapping through axiosData to render AxiosCard for each blog */}
         {axiosData.map((e) => {
           // Adding mock address and company data for each blog
@@ -68,6 +71,8 @@ function Home() {
             />
           );
         })}
+        {/* </div> */}
+        </div>
       </div>
     </>
   );
