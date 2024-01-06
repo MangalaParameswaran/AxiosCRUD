@@ -1,6 +1,14 @@
 td .img:hover{
   cursor: pointer !important;
 }
+.img-home{
+  border-radius: 20em !important;
+  width: 100%;
+}
+.img-home:hover{
+  cursor: pointer;
+  transition: 1s ease-in;
+}
 .switch {
     position: relative;
     display: inline-block;

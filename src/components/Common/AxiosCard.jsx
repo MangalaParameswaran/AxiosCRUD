@@ -10,7 +10,7 @@ function AxiosCard({ name, adrress, image, email, companyName, website }) {
       <Card style={{ width: '30rem', padding: '10px' }}>
         <Card.Title className='text-center fw-bold'>{`Name: ${name}`}</Card.Title>
         {/* Card image with alt text and custom height */}
-        <Card.Img variant="top" src={image} alt={name} style={{ height: '25em' }} title={name} />
+        <Card.Img variant="top" src={image} alt={name} style={{ height: '25em' }} title={name} className='img-home' />
         <Card.Body>
           {/* Displaying blog information in Card.Text components */}
           <Card.Text className='text-center fw-bold'>
