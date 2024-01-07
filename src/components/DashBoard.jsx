@@ -87,18 +87,18 @@ function DashBoard() {
                 {/* Table for displaying blog data */}
                 <Table responsive bordered striped hover className="overflow-auto mt-4">
                     <thead>
-                        <tr>
+                        <tr style={{color:'red'}}>
                             {/* Table headers */}
-                            <th className='text-center fw-bold' style={{backgroundColor:'aliceblue'}}>#</th>
-                            <th className='text-center fw-bold' style={{backgroundColor:'aliceblue'}}>Name</th>
-                            <th className='text-center fw-bold' style={{backgroundColor:'aliceblue'}}>User Name</th>
-                            <th className='text-center fw-bold' style={{backgroundColor:'aliceblue'}}>Address</th>
-                            <th className='text-center fw-bold' style={{backgroundColor:'aliceblue'}}>Image</th>
-                            <th className='text-center fw-bold' style={{backgroundColor:'aliceblue'}}>Email</th>
-                            <th className='text-center fw-bold' style={{backgroundColor:'aliceblue'}}>Company Name</th>
-                            <th className='text-center fw-bold' style={{backgroundColor:'aliceblue'}}>Website Name</th>
-                            <th className='text-center fw-bold' style={{backgroundColor:'aliceblue'}}>Status</th>
-                            <th className='text-center fw-bold' style={{backgroundColor:'aliceblue'}}>Actions</th>
+                            <th className='text-center fw-bold' style={{backgroundColor:'aliceblue',color:'red',padding:'1em', fontStyle:'italic'}}>#</th>
+                            <th className='text-center fw-bold' style={{backgroundColor:'aliceblue',color:'red',padding:'1em', fontStyle:'italic'}}>Name</th>
+                            <th className='text-center fw-bold' style={{backgroundColor:'aliceblue',color:'red',padding:'1em', fontStyle:'italic'}}>User Name</th>
+                            <th className='text-center fw-bold' style={{backgroundColor:'aliceblue',color:'red',padding:'1em', fontStyle:'italic'}}>Address</th>
+                            <th className='text-center fw-bold' style={{backgroundColor:'aliceblue',color:'red',padding:'1em', fontStyle:'italic'}}>Image</th>
+                            <th className='text-center fw-bold' style={{backgroundColor:'aliceblue',color:'red',padding:'1em', fontStyle:'italic'}}>Email</th>
+                            <th className='text-center fw-bold' style={{backgroundColor:'aliceblue',color:'red',padding:'1em', fontStyle:'italic'}}>Company Name</th>
+                            <th className='text-center fw-bold' style={{backgroundColor:'aliceblue',color:'red',padding:'1em', fontStyle:'italic'}}>Website Name</th>
+                            <th className='text-center fw-bold' style={{backgroundColor:'aliceblue',color:'red',padding:'1em', fontStyle:'italic'}}>Status</th>
+                            <th className='text-center fw-bold' style={{backgroundColor:'aliceblue',color:'red',padding:'1em', fontStyle:'italic'}}>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
