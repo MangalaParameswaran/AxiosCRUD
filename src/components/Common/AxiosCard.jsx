@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card';
 import { API_URL } from '../../App';
 
 // AxiosCard component to display blog information
-function AxiosCard({ name, adrress,username, image, email, companyName, website }) {
+function AxiosCard({ name,username, adrress, image, email, companyName, website }) {
   return (
     <div className='mx-auto my-4 d-flex justify-content-center col-11 col-md-6 col-lg-4 mx-auto col-sm-10'>
       {/* Bootstrap Card component */}

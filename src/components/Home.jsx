@@ -63,13 +63,14 @@ function Home() {
           return (
             <AxiosCard
               name={e.name}
+              username={e.username}
               adrress={e.adrress}
               image={e.image}
               email={e.email}
               companyName={e.companyName}
               website={e.website}
               key={e.id}
-              userName={e.username}
+              
             />
           );
         })}
