@@ -14,9 +14,7 @@ function DashBoard() {
     // State to store fetched data from the API
     let [axiosData, setAxiosData] = useState([]);
 
-    // State for form fields (companyName and adrress)
-    let [companyName, setCompanyName] = useState("");
-    let [adrress, setAdrress] = useState("");
+
 
     // Effect hook to fetch data from the API on component mount
     useEffect(() => {
@@ -66,6 +64,7 @@ function DashBoard() {
         try {
             // Axios DELETE request to delete a blog
             let res = await axios.delete(`${API_URL}/${id}`);
+            // console.log(res);
 
             // Check if the request was successful (status code 200)
             if (res.status === 200) {
@@ -92,6 +91,7 @@ function DashBoard() {
                             {/* Table headers */}
                             <th className='text-center fw-bold' style={{backgroundColor:'aliceblue'}}>#</th>
                             <th className='text-center fw-bold' style={{backgroundColor:'aliceblue'}}>Name</th>
+                            <th className='text-center fw-bold' style={{backgroundColor:'aliceblue'}}>User Name</th>
                             <th className='text-center fw-bold' style={{backgroundColor:'aliceblue'}}>Address</th>
                             <th className='text-center fw-bold' style={{backgroundColor:'aliceblue'}}>Image</th>
                             <th className='text-center fw-bold' style={{backgroundColor:'aliceblue'}}>Email</th>
@@ -104,6 +104,7 @@ function DashBoard() {
                     <tbody>
                         {/* Mapping through axiosData to render each blog */}
                         {axiosData.map((e, i) => {
+                            console.log(e);
                             e.address = {
                                 "street": "Kulas Light",
                                 "suite": "Apt. 556",
@@ -115,26 +116,25 @@ function DashBoard() {
                                 "catchPhrase": "Multi-layered client-server neural-net",
                                 "bs": "harness real-time e-markets"
                             }
+ 
                             return (
                                 <tr key={i}>
                                     {/* Displaying blog data */}
                                     <td className='text-center'><b>{i + 1}</b></td>
                                     <td className='text-center'><i><b>{e.name}</b></i></td>
+                                    <td className='text-center'><i><b>{e.username}</b></i></td>
                                     <div style={{ width: "300px", overflow: "hidden", whiteSpace: "wrap", textOverflow: "ellipsis" }}>
-                                        <td className='text-center'>
+                                        <td className='d-flex justify-content-center'>
                                             {/* Displaying address data */}
-                                            <i><b>{`Street: ${e.address.street}
-                                            City: ${e.address.city}
-                                            ZipCode: ${e.address.zipcode}
-                                            `}</b></i>
+                                            <i className='text-center'><b>{` ${e.adrress}`}</b></i>
                                         </td>
                                     </div>
                                     <td className='text-center'>
                                         {/* Displaying blog image */}
-                                        <img src={e.image} alt={e.name} style={{ width: "8em", height: '8em' }} className='img-fluid img rounded-4' title={e.name} />
+                                        <img src={e.image} alt={e.name} style={{ width: "12em", height: '8em' }} className='img-fluid img rounded-4' title={e.name} />
                                     </td>
                                     <td className='text-center'><i><b>{e.email}</b></i></td>
-                                    <td className='text-center'><i><b>{e.company.name}</b></i></td>
+                                    <td className='text-center'><i><b>{e.companyName}</b></i></td>
                                     <td className='text-center'><i><b>{e.website}</b></i></td>
                                     <td className='text-center'>
                                         {/* Toggle switch for blog status */}

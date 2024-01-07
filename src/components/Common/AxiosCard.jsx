@@ -3,9 +3,9 @@ import Card from 'react-bootstrap/Card';
 import { API_URL } from '../../App';
 
 // AxiosCard component to display blog information
-function AxiosCard({ name, adrress, image, email, companyName, website }) {
+function AxiosCard({ name, adrress,username, image, email, companyName, website }) {
   return (
-    <div className='mx-auto my-4 d-flex justify-content-center col-11 col-md-6 col-lg-4 mx-auto col-sm-8'>
+    <div className='mx-auto my-4 d-flex justify-content-center col-11 col-md-6 col-lg-4 mx-auto col-sm-10'>
       {/* Bootstrap Card component */}
       <Card style={{ width: '30rem', padding: '10px' }}>
         <Card.Title className='text-center fw-bold'>{`Name: ${name}`}</Card.Title>
@@ -13,6 +13,10 @@ function AxiosCard({ name, adrress, image, email, companyName, website }) {
         <Card.Img variant="top" src={image} alt={name} style={{ height: '25em' }} title={name} className='img-home' />
         <Card.Body>
           {/* Displaying blog information in Card.Text components */}
+          <Card.Text className='text-center fw-bold'>
+            <i>{`User Name: ${username}`}</i>
+          </Card.Text>
+          <hr />
           <Card.Text className='text-center fw-bold'>
             <i>{`Address: ${adrress}`}</i>
           </Card.Text>

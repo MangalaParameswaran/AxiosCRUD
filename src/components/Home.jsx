@@ -45,6 +45,7 @@ function Home() {
         
         {/* Mapping through axiosData to render AxiosCard for each blog */}
         {axiosData.map((e) => {
+          console.log(e);
           // Adding mock address and company data for each blog
           e.address = {
             'street': 'Kulas Light',
@@ -62,12 +63,13 @@ function Home() {
           return (
             <AxiosCard
               name={e.name}
-              adrress={e.address.city}
+              adrress={e.adrress}
               image={e.image}
               email={e.email}
-              companyName={e.company.name}
+              companyName={e.companyName}
               website={e.website}
               key={e.id}
+              userName={e.username}
             />
           );
         })}

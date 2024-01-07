@@ -11,6 +11,7 @@ import AxiosCard from './Common/AxiosCard';
 function Create() {
   // State variables to store form data
   let [name, setName] = useState('');
+  let [username, setusername] = useState('');
   let [adrress, setAdrress] = useState('');
   let [image, setImage] = useState('');
   let [email, setEmail] = useState('');
@@ -24,7 +25,7 @@ function Create() {
   let handleCreate = async () => {
     try {
       // Create data object with form values
-      let data = { name, adrress, image, email, companyName, website, status: false };
+      let data = { name,username, adrress, image, email, companyName, website, status: false };
 
       // Axios POST request to create a new blog
       let res = await axios.post(API_URL, data);
@@ -54,6 +55,10 @@ function Create() {
           <Form.Group className="mb-3 text-center">
             <Form.Label className='fw-bold'>Name</Form.Label>
             <Form.Control type="text" placeholder="Name" onChange={(e) => setName(e.target.value)} className="text-center fw-bold" />
+          </Form.Group>
+          <Form.Group className="mb-3 text-center">
+            <Form.Label className='fw-bold'>User Name</Form.Label>
+            <Form.Control type="text" placeholder="Name" onChange={(e) => setusername(e.target.value)} className="text-center fw-bold" />
           </Form.Group>
           <Form.Group className="mb-3 text-center">
             <Form.Label className='fw-bold'>Address</Form.Label>
@@ -89,7 +94,7 @@ function Create() {
         <h2 className='text-center'>Preview</h2>
         <hr />
         {/* Display a preview of the created blog using AxiosCard */}
-        <AxiosCard name={name} adrress={adrress} image={image} email={email} companyName={companyName} website={website} />
+        <AxiosCard name={name} username={username} adrress={adrress} image={image} email={email} companyName={companyName} website={website} />
       </div>
     </>
   );
